@@ -1,0 +1,36 @@
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	width: 1000px;
+	height: 700px;
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 100%;
+}
+.inner {
+	-webkit-transition: all 1.0s ease; 
+	width: 500%;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+
+.slide {
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+.slide img {
+	max-width: 100%;
+}
+
+#slide1:checked ~ .container .inner { margin-left:0; }
+#slide2:checked ~ .container .inner { margin-left:-100%; }
+#slide3:checked ~ .container .inner { margin-left:-200%; }
